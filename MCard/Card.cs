@@ -93,7 +93,7 @@ namespace PcSc.MCard
 			}
 		}
 
-		public struct Memory
+		private struct Memory
 		{
 			public uint Flags;
 			public uint Size;
