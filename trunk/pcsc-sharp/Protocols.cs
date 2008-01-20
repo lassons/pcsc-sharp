@@ -27,7 +27,7 @@ using System;
 namespace PcSc
 {
 	[Flags()]
-	public enum SmartCardProtocols : uint
+	public enum SmartCardProtocols : int
 	{
 		Undefined = 0,
 		T0        = 1,

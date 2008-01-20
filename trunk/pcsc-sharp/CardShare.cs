@@ -26,7 +26,7 @@ using System;
 
 namespace PcSc
 {
-	public enum SmartCardShare : uint
+	public enum SmartCardShare : int
 	{
 		Exclusive = 1,
 		Shared    = 2,

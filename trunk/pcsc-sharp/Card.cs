@@ -31,7 +31,7 @@ namespace PcSc
 	{
 
 		protected IntPtr card;
-		protected SmartCardDisposition disposition = SmartCardDisposition.Leave;
+		protected SmartCardDisposition dispose_disposition = SmartCardDisposition.Leave;
 
 		internal SmartCard(IntPtr card) {
 			this.card = card;
@@ -47,17 +47,17 @@ namespace PcSc
 		}
 
 		protected void Dispose(bool disposing) {
-			int ret = SCardDisconnect(card, disposition);
+			int ret = SCardDisconnect(card, dispose_disposition);
 			if (ret != 0)
 				Console.WriteLine(SmartCardContext.ToException(ret).Message);
 		}
 		
 		public SmartCardDisposition Disposition {
 			get {
-				return disposition;
+				return dispose_disposition;
 			}
 			set {
-				disposition = value;
+				dispose_disposition = value;
 			}
 		}
 		

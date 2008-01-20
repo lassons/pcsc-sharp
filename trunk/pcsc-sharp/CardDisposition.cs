@@ -26,7 +26,7 @@ using System;
 
 namespace PcSc
 {
-	public enum SmartCardDisposition : uint
+	public enum SmartCardDisposition : int
 	{
 		Leave   = 0,
 		Reset   = 1,

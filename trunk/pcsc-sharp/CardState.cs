@@ -27,7 +27,7 @@ using System;
 namespace PcSc
 {
 	[Flags()]
-	public enum SmartCardState : uint
+	public enum SmartCardState : int
 	{
 		Unaware = 0,
 		Ignore = 1,
