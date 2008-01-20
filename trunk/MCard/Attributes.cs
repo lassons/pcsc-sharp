@@ -26,7 +26,7 @@ using System;
 
 namespace PcSc.MCard
 {
-	public enum MemoryCardAttribute : uint
+	public enum MemoryCardAttribute : int
 	{
 		Type          = 0,
 		Protocol      = 1,

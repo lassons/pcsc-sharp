@@ -26,7 +26,7 @@ using System;
 
 namespace PcSc.MCard
 {
-	public enum MemoryCardConnectMode : uint
+	public enum MemoryCardConnectMode : int
 	{
 		Forced      = 0,
 		Intelligent = 1
