@@ -105,14 +105,16 @@ namespace PcSc
 			WaitForStatusChange(reader, currentState, newState, uint.MaxValue);
 		}
 		
-		public void WaitForStatusChange(string reader, SmartCardState currentState, SmartCardState newState, uint timeout) {
+		public void WaitForStatusChange(string reader, SmartCardState currentState, SmartCardState newState, long timeout) {
+			if ((timeout < 0) || (timeout > uint.MaxValue))
+				throw new ArgumentOutOfRangeException("timeout must be a 32-bit unsigned integer value");
 			ReaderState readerState = new ReaderState();
 			readerState.Reader = reader;
 			readerState.UserData = IntPtr.Zero;
 			readerState.CurrentState = currentState;
 			readerState.EventState = newState;
 			readerState.AtrLength = 0;
-			int ret = SCardGetStatusChange(context, timeout, ref readerState, 1);
+			int ret = SCardGetStatusChange(context, (uint)timeout, ref readerState, 1);
 			if (ret != 0)
 				throw ToException(ret);
 		}

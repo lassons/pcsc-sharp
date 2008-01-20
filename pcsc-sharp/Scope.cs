@@ -26,7 +26,7 @@ using System;
 
 namespace PcSc
 {
-	public enum SmartCardScope : uint
+	public enum SmartCardScope : int
 	{
 		User   = 0,
 		Local  = 1,
