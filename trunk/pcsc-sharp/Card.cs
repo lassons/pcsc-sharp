@@ -27,7 +27,7 @@ using System.Runtime.InteropServices;
 
 namespace PcSc
 {
-	public class SmartCard : IDisposable
+	public class SmartCard : MarshalByRefObject, IDisposable
 	{
 
 		protected IntPtr card;
