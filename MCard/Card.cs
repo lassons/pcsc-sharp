@@ -27,7 +27,7 @@ using System.Runtime.InteropServices;
 
 namespace PcSc.MCard
 {
-	public class MemoryCard : IDisposable
+	public class MemoryCard : MarshalByRefObject, IDisposable
 	{
 
 		private IntPtr card;

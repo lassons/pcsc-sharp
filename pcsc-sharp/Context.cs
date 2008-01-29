@@ -29,7 +29,7 @@ using System.Runtime.InteropServices;
 
 namespace PcSc
 {
-	public class SmartCardContext : IDisposable
+	public class SmartCardContext : MarshalByRefObject, IDisposable
 	{
 		protected IntPtr context;
 
